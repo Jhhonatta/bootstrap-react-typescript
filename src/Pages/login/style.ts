@@ -10,6 +10,6 @@ export const ContainerLogin = styled.div`
     background: none;
     color: black;
     border: none;
-    padding-top: 2px;
+    padding-top: 4px;
   }
 `;
