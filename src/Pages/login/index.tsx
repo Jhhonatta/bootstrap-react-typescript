@@ -3,7 +3,7 @@ import { ContainerLogin } from "./style";
 
 const Login = () => {
   return (
-    <ContainerLogin className="container d-flex align-items-center justify-content-center h-100">
+    <ContainerLogin className="container d-flex align-items-center justify-content-center h-100 max-width: 900px;">
       <Form className="row col-md-6">
         <Form.Group className="col-12 mb-3" controlId="formBasicEmail">
           <Form.Label>Email</Form.Label>

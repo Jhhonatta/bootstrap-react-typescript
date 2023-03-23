@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const ContainerLogin = styled.div`
-  max-width: 900px;
-
   .form-control::-webkit-input-placeholder {
     color: black;
     opacity: 60%;
