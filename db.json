@@ -17,5 +17,18 @@
       "id": 2
     }
   ],
-  "text": []
+  "text": [
+    {
+      "userId": 2,
+      "emotional state": "Fear",
+      "secret": "Meu avô está doente!",
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "emotional state": "Fear",
+      "secret": "Meu avô está doente!",
+      "id": 2
+    }
+  ]
 }

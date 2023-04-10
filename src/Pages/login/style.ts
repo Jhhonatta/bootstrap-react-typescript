@@ -12,4 +12,8 @@ export const ContainerLogin = styled.div`
     border: none;
     padding-top: 4px;
   }
+
+  .error {
+    color: red;
+  }
 `;
