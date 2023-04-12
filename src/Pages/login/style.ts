@@ -6,6 +6,15 @@ export const ContainerLogin = styled.div`
     opacity: 60%;
   }
 
+  .form {
+    max-width: 468px;
+  }
+
+  .text-login {
+    color: red;
+    font-size: 4rem;
+  }
+
   .bt-record {
     background: none;
     color: black;

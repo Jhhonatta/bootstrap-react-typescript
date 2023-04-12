@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 const Way = () => {
   return (
     <Routes>
-      <Route path={"/login"} element={<Login />} />
+      <Route path={"/"} element={<Login />} />
     </Routes>
   );
 };
