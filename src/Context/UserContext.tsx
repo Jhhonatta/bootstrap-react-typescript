@@ -1,10 +1,9 @@
-import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import api from "../Service/api";
 
 import { ReactNode, createContext } from "react";
 
 interface IUserContext {
-  login: any;
   onSubmitLogin: (data: any) => Promise<void>;
 }
 
@@ -15,7 +14,7 @@ interface IUserProviderProps {
 export const UserContext = createContext<IUserContext>({} as IUserContext);
 
 function UserProvider({ children }: IUserProviderProps) {
-  const login = useLocation();
+  const navigate = useNavigate();
 
   const onSubmitLogin = async (data: any) => {
     await api.post("/login", data).then((response) => {
@@ -24,11 +23,12 @@ function UserProvider({ children }: IUserProviderProps) {
         `${response.data.accessToken}`
       );
       localStorage.setItem("@users", JSON.stringify(response.data.user));
+      navigate("/dashboard", { replace: true });
     });
   };
 
   return (
-    <UserContext.Provider value={{ login, onSubmitLogin }}>
+    <UserContext.Provider value={{ onSubmitLogin }}>
       {children}
     </UserContext.Provider>
   );

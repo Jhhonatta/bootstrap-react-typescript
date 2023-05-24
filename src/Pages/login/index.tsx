@@ -19,15 +19,15 @@ const Login = () => {
 
   return (
     <ContainerLogin
-      className="bg-warning d-flex align-items-center justify-content-center h-100 m-0"
+      className="containerLogin d-flex align-items-center justify-content-center h-100 m-0"
       onSubmit={handleSubmit(onSubmitLogin)}
     >
-      <Form className="form row  bg-dark m-1 rounded">
+      <Form className="form row  m-1 rounded">
         <Form.Group className="col-12 mb-3" controlId="formBasicEmail">
-          <FormText className="text-login row d-flex justify-content-center m-0">
-            Login
+          <FormText className="tittle-login row d-flex justify-content-center m-0">
+            Notepad
           </FormText>
-          <Form.Label className="text-light">Email</Form.Label>
+          <Form.Label className="text-label">Email</Form.Label>
           <Form.Control
             type="email"
             placeholder="Digite seu e-mail"
@@ -42,10 +42,11 @@ const Login = () => {
         </Form.Group>
 
         <Form.Group className="col-12 mb-3" controlId="formBasicPassword">
-          <Form.Label className="text-light">Senha</Form.Label>
+          <Form.Label className="text-label">Senha</Form.Label>
           <Form.Control
             type="password"
             placeholder="Digite sua senha"
+            className="input"
             {...register("password")}
           />
           <FormText className="error">
@@ -56,7 +57,7 @@ const Login = () => {
           <Button
             variant="primary"
             type="submit"
-            className="col-6 col-sm-4 col-md-6; btn-sm"
+            className="button-login col-6 col-sm-4 col-md-6; btn-sm"
           >
             Login
           </Button>
