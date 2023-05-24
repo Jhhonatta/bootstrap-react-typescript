@@ -1,5 +1,5 @@
 import { ContainerDashboard } from "./style";
-import { Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 
 const Dashboard = () => {
   return (
@@ -10,6 +10,7 @@ const Dashboard = () => {
           as="textarea"
           aria-label="With textarea"
         />
+        <Button>Adicionar</Button>
       </Form>
     </ContainerDashboard>
   );
