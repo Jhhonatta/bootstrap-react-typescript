@@ -1,7 +1,18 @@
 import { ContainerDashboard } from "./style";
-import { Button, Form, Navbar, Nav } from "react-bootstrap";
+import { Button, Modal, Navbar, Nav, Form } from "react-bootstrap";
+import { useState } from "react";
 
 const Dashboard = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <ContainerDashboard className="containerDashboard">
       <Navbar bg="light" expand="sm" className="p-3 m-0">
@@ -9,7 +20,29 @@ const Dashboard = () => {
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="w-100 d-flex justify-content-between">
-            <Button>Perfil</Button>
+            <Button variant="primary" onClick={openModal}>
+              Perfil
+            </Button>
+
+            <Modal show={showModal} onHide={closeModal} centered>
+              <Modal.Header closeButton className="">
+                <Modal.Title className="p-0">Dados pessoais</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <Form>
+                  <Form.Group>
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control type="email" placeholder="Enter email" />
+                  </Form.Group>
+                </Form>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="primary" onClick={closeModal}>
+                  Salvar
+                </Button>
+              </Modal.Footer>
+            </Modal>
+
             <Button>Adicionar tarefa</Button>
             <Button>Sair</Button>
           </Nav>
