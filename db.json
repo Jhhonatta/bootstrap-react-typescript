@@ -29,6 +29,12 @@
       "emotional state": "Fear",
       "secret": "Meu avô está doente!",
       "id": 2
+    },
+    {
+      "userId": 2,
+      "emotional state": "Fear",
+      "task": "Meu avô está doente!",
+      "id": 3
     }
   ]
 }
