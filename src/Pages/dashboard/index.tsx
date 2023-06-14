@@ -24,29 +24,6 @@ const Dashboard = () => {
           <Nav className="w-100 d-flex justify-content-between">
             <ModalProfile />
             <ModalAddTask />
-            {/* <Button variant="primary" onClick={ModalProfile}>
-              Perfil
-            </Button> */}
-
-            {/* <Modal show={showModal} onHide={closeModal} centered>
-              <Modal.Header closeButton className="">
-                <Modal.Title className="p-0">Dados pessoais</Modal.Title>
-              </Modal.Header>
-              <Modal.Body>
-                <Form>
-                  <Form.Group>
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
-                  </Form.Group>
-                </Form>
-              </Modal.Body>
-              <Modal.Footer>
-                <Button variant="primary" onClick={closeModal}>
-                  Salvar
-                </Button>
-              </Modal.Footer>
-            </Modal> */}
-
             <Button>Sair</Button>
           </Nav>
         </Navbar.Collapse>
