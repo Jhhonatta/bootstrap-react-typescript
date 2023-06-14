@@ -1,7 +1,20 @@
 import { ContainerDashboard } from "./style";
-import { Button, Form, Navbar, Nav } from "react-bootstrap";
+import { Button, Modal, Navbar, Nav, Form } from "react-bootstrap";
+import { useState } from "react";
+import ModalProfile from "../../Components/modalProfile";
+import ModalAddTask from "../../Components/modalAddTask";
 
 const Dashboard = () => {
+  // const [showModal, setShowModal] = useState(false);
+
+  // const openModal = () => {
+  //   setShowModal(true);
+  // };
+
+  // const closeModal = () => {
+  //   setShowModal(false);
+  // };
+
   return (
     <ContainerDashboard className="containerDashboard">
       <Navbar bg="light" expand="sm" className="p-3 m-0">
@@ -9,8 +22,8 @@ const Dashboard = () => {
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="w-100 d-flex justify-content-between">
-            <Button>Perfil</Button>
-            <Button>Adicionar tarefa</Button>
+            <ModalProfile />
+            <ModalAddTask />
             <Button>Sair</Button>
           </Nav>
         </Navbar.Collapse>
