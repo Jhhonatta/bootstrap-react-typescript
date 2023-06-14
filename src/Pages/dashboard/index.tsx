@@ -1,17 +1,19 @@
 import { ContainerDashboard } from "./style";
 import { Button, Modal, Navbar, Nav, Form } from "react-bootstrap";
 import { useState } from "react";
+import ModalProfile from "../../Components/modalProfile";
+import ModalAddTask from "../../Components/modalAddTask";
 
 const Dashboard = () => {
-  const [showModal, setShowModal] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
 
-  const openModal = () => {
-    setShowModal(true);
-  };
+  // const openModal = () => {
+  //   setShowModal(true);
+  // };
 
-  const closeModal = () => {
-    setShowModal(false);
-  };
+  // const closeModal = () => {
+  //   setShowModal(false);
+  // };
 
   return (
     <ContainerDashboard className="containerDashboard">
@@ -20,11 +22,13 @@ const Dashboard = () => {
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="w-100 d-flex justify-content-between">
-            <Button variant="primary" onClick={openModal}>
+            <ModalProfile />
+            <ModalAddTask />
+            {/* <Button variant="primary" onClick={ModalProfile}>
               Perfil
-            </Button>
+            </Button> */}
 
-            <Modal show={showModal} onHide={closeModal} centered>
+            {/* <Modal show={showModal} onHide={closeModal} centered>
               <Modal.Header closeButton className="">
                 <Modal.Title className="p-0">Dados pessoais</Modal.Title>
               </Modal.Header>
@@ -41,9 +45,8 @@ const Dashboard = () => {
                   Salvar
                 </Button>
               </Modal.Footer>
-            </Modal>
+            </Modal> */}
 
-            <Button>Adicionar tarefa</Button>
             <Button>Sair</Button>
           </Nav>
         </Navbar.Collapse>
