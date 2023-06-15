@@ -17,24 +17,36 @@
       "id": 2
     }
   ],
-  "text": [
+  "task": [
     {
       "userId": 2,
-      "emotional state": "Fear",
-      "secret": "Meu avô está doente!",
+      "task": "Dever de casa",
       "id": 1
     },
     {
       "userId": 2,
-      "emotional state": "Fear",
-      "secret": "Meu avô está doente!",
+      "task": "Dever de casa",
       "id": 2
     },
     {
       "userId": 2,
-      "emotional state": "Fear",
-      "task": "Meu avô está doente!",
+      "task": "Dever de casa",
       "id": 3
+    },
+    {
+      "userId": 2,
+      "task": "Dever de casa",
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "task": "Dever de casa",
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "task": "Dever de casa",
+      "id": 6
     }
   ]
 }
