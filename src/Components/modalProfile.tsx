@@ -24,6 +24,8 @@ const ModalProfile = () => {
           <p>{user.city}</p>
           <h5>Email</h5>
           <p>{user.email}</p>
+          <h5>Id</h5>
+          <p>{user.id}</p>
         </Modal.Body>
       </Modal>
     </>
