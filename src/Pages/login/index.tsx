@@ -18,55 +18,21 @@ const Login = () => {
   });
 
   return (
-    <ContainerLogin
-      className="containerLogin d-flex align-items-center justify-content-center h-100 m-0"
-      onSubmit={handleSubmit(onSubmitLogin)}
-    >
-      <Form className="form row  m-1 rounded">
-        <Form.Group className="col-12 mb-3" controlId="formBasicEmail">
-          <FormText className="tittle-login row d-flex justify-content-center m-0">
-            Notepad
-          </FormText>
-          <Form.Label className="text-label">Email</Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Digite seu e-mail"
-            {...register("email")}
-          />
-          <FormText className="error row col-md-12 m-0">
-            {errors?.email?.message as unknown as string}
-          </FormText>
-          <Form.Text className="text-warning">
-            Não compartilhe seu e-mail com terceiros.
-          </Form.Text>
-        </Form.Group>
-
-        <Form.Group className="col-12 mb-3" controlId="formBasicPassword">
-          <Form.Label className="text-label">Senha</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Digite sua senha"
-            className="input"
-            {...register("password")}
-          />
-          <FormText className="error">
-            {errors?.password?.message as unknown as string}
-          </FormText>
-        </Form.Group>
-        <Form.Group className="d-flex flex-column">
-          <Button
-            variant="primary"
-            type="submit"
-            className="button-login col-6 col-sm-4 col-md-6; btn-sm"
-          >
-            Login
-          </Button>
-          <Container className=" d-flex justify-content-center mt-3 p-0">
-            <Form.Text>Não possui cadastro?</Form.Text>
-            <Button className="bt-record ">Clique aqui</Button>
-          </Container>
-        </Form.Group>
-      </Form>
+    <ContainerLogin className="containerLogin d-flex align-items-center justify-content-center h-100 m-0">
+      <Button
+        variant="primary"
+        type="submit"
+        className="button-login col-6 col-sm-4 col-md-6; btn-sm"
+        onClick={onSubmitLogin}
+      >
+        Login
+      </Button>
+      <Container className=" d-flex justify-content-center mt-3 p-0">
+        <Form.Text>Não possui cadastro?</Form.Text>
+        <Button className="bt-record ">Clique aqui</Button>
+      </Container>
+      {/* </Form.Group> */}
+      {/* </Form> */}
     </ContainerLogin>
   );
 };

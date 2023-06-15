@@ -7,8 +7,6 @@ import FormSchemaCreateTask from "../Validations/validationCreateTask";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 const ModalAddTask = () => {
-  const { onSubmitCreateTask } = useContext(UserContext);
-
   const [showModal, setShowModal] = useState(false);
 
   const { register, handleSubmit } = useForm({
@@ -25,7 +23,7 @@ const ModalAddTask = () => {
           <Modal.Title className="p-0">Nova tarefa</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form onSubmit={handleSubmit(onSubmitCreateTask)}>
+          <Form>
             <Form.Group>
               <Form.Control
                 type="number"
