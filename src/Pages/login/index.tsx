@@ -1,38 +1,38 @@
-import { Form, Button, Container, FormText } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import { ContainerLogin } from "./style";
 import { useContext } from "react";
 import { UserContext } from "../../Context/UserContext";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import FormSchemaLogin from "../../Validations/validationLogin";
 
 const Login = () => {
   const { onSubmitLogin } = useContext(UserContext);
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(FormSchemaLogin),
-  });
-
   return (
-    <ContainerLogin className="containerLogin d-flex align-items-center justify-content-center h-100 m-0">
-      <Button
-        variant="primary"
-        type="submit"
-        className="button-login col-6 col-sm-4 col-md-6; btn-sm"
-        onClick={onSubmitLogin}
-      >
-        Login
-      </Button>
-      <Container className=" d-flex justify-content-center mt-3 p-0">
-        <Form.Text>Não possui cadastro?</Form.Text>
-        <Button className="bt-record ">Clique aqui</Button>
+    <ContainerLogin className="containerLogin d-flex align-items-center justify-content-center  h-100 m-0">
+      <Container className="d-md-flex">
+        <Container className="container-iniciar d-flex justify-content-center flex-column w-auto">
+          <p className="title-iniciar text-center fs-10vw"> Notepad </p>
+          <p className="text-white ">Anote suas ideias </p>
+
+          <p className="text-white"> Armazene informações temporárias </p>
+
+          <p className="text-white "> Faça sua lista de afazeres </p>
+
+          <p className="text-finish">
+            {" "}
+            Todas as suas tarefas em um só lugar ;){" "}
+          </p>
+        </Container>
+        <Container className="d-flex justify-content-center flex-column col-6">
+          <Button
+            variant="primary"
+            type="submit"
+            className="button-iniciar"
+            onClick={onSubmitLogin}
+          >
+            Iniciar
+          </Button>
+        </Container>
       </Container>
-      {/* </Form.Group> */}
-      {/* </Form> */}
     </ContainerLogin>
   );
 };

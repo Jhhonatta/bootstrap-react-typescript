@@ -1,45 +1,29 @@
 import styled from "styled-components";
 
 export const ContainerLogin = styled.div`
-  background-color: rgba(18, 18, 20, 1);
+  background-color: black;
+  font-family: Nunito;
 
-  .form-control::-webkit-input-placeholder {
-    color: black;
-    opacity: 60%;
-  }
+  .title-iniciar {
+    font-weight: 600;
 
-  .form {
-    background-color: rgba(33, 37, 41, 1);
-    max-width: 468px;
-  }
-
-  .tittle-login {
     color: rgba(255, 87, 127, 1);
-    font-size: 4rem;
-    font-family: inter;
+    background-color: rgba(255, 255, 255, 1);
   }
 
-  .text-label {
-    color: rgba(248, 249, 250, 1);
-    font-family: inter;
+  .container-iniciar {
+    padding: 1rem;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 1);
+
+    .text-finish {
+      background-color: rgba(33, 37, 41, 1);
+      width: auto;
+    }
   }
 
-  .input {
-    background-color: rgba(248, 249, 250, 1);
-  }
-
-  .button-login {
+  .button-iniciar {
     background-color: rgba(255, 87, 127, 1);
     border: 1px solid rgba(255, 87, 127, 1);
-  }
-
-  .bt-record {
-    background: none;
-    border: none;
-    padding-top: 4px;
-  }
-
-  .error {
-    color: red;
   }
 `;
