@@ -9,16 +9,16 @@ interface IUserContext {
   logout: (data: any) => Promise<void>;
   task: string;
   setTask: (data: any) => void;
-  listTask: [];
+  listTask: string[];
   setListTask: (data: any) => void;
 }
 
 function UserProvider({ children }: any) {
   const navigate = useNavigate();
 
-  const [task, setTask] = useState<any>([]);
+  const [task, setTask] = useState<string>("");
 
-  const [listTask, setListTask] = useState<any>([]);
+  const [listTask, setListTask] = useState<string[]>([]);
 
   const onSubmitLogin = async (data: any) => {
     return navigate("/dashboard", { replace: true });
