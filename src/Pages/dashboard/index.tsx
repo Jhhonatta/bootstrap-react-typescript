@@ -1,6 +1,7 @@
 import { ContainerDashboard } from "./style";
 import { Button, Modal, Navbar, Nav, Form } from "react-bootstrap";
-import { useState } from "react";
+import { useContext } from "react";
+import { UserContext } from "../../Context/UserContext";
 import ModalAddTask from "../../Components/modalAddTask";
 import { useNavigate } from "react-router-dom";
 
@@ -15,7 +16,7 @@ const Dashboard = () => {
   //   setShowModal(false);
   // };
 
-  const navigate = useNavigate();
+  const { logout } = useContext(UserContext);
 
   return (
     <ContainerDashboard className="containerDashboard">
@@ -25,9 +26,7 @@ const Dashboard = () => {
         <Navbar.Collapse id="navbar-nav">
           <Nav className="w-100 d-flex justify-content-between">
             <ModalAddTask />
-            <Button onClick={() => navigate("/", { replace: true })}>
-              Sair
-            </Button>
+            <Button onClick={logout}>Sair</Button>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
