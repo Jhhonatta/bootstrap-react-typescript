@@ -3,15 +3,20 @@ import { useState } from "react";
 import { useContext } from "react";
 import { UserContext } from "../Context/UserContext";
 import { useForm } from "react-hook-form";
-import FormSchemaCreateTask from "../Validations/validationCreateTask";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 const ModalAddTask = () => {
+  const { setTask, task, listTask, setListTask } = useContext(UserContext);
+
   const [showModal, setShowModal] = useState(false);
 
-  const { register, handleSubmit } = useForm({
-    resolver: yupResolver(FormSchemaCreateTask),
-  });
+  const handlerControl = (event: React.FormEvent) => {
+    event.preventDefault();
+    console.log(task);
+    setListTask([...listTask, task]);
+    console.log(listTask);
+    // localStorage.setItem("@listTask", `${listTask}`);
+  };
 
   return (
     <>
@@ -23,17 +28,12 @@ const ModalAddTask = () => {
           <Modal.Title className="p-0">Nova tarefa</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+          <Form onSubmit={handlerControl}>
             <Form.Group>
-              <Form.Control
-                type="number"
-                placeholder="Id"
-                {...register("userId")}
-              />
               <Form.Control
                 type="text"
                 placeholder="Digite sua nova tarefa"
-                {...register("task")}
+                onChange={(event) => setTask(event.target.value)}
               />
             </Form.Group>
             <Form.Group className="p-0 d-flex justify-content-center mt-1">
