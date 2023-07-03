@@ -1,21 +1,10 @@
 import { ContainerDashboard } from "./style";
-import { Button, Modal, Navbar, Nav, Form } from "react-bootstrap";
+import { Button, Navbar, Nav } from "react-bootstrap";
 import { useContext } from "react";
 import { UserContext } from "../../Context/UserContext";
-import ModalAddTask from "../../Components/modalAddTask";
-import { useNavigate } from "react-router-dom";
-
+import ModalAddTask from "../../Components/modalAddTask/modalAddTask";
+import DashboardListTask from "../../Components/containerListTask/containerListTask";
 const Dashboard = () => {
-  // const [showModal, setShowModal] = useState(false);
-
-  // const openModal = () => {
-  //   setShowModal(true);
-  // };
-
-  // const closeModal = () => {
-  //   setShowModal(false);
-  // };
-
   const { logout } = useContext(UserContext);
 
   return (
@@ -30,14 +19,7 @@ const Dashboard = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      {/* <Form>
-        <Form.Control
-          placeholder="Digite aqui..."
-          as="textarea"
-          aria-label="With textarea"
-        />
-        <Button>Adicionar</Button>
-      </Form> */}
+      <DashboardListTask />
     </ContainerDashboard>
   );
 };

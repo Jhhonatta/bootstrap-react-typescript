@@ -1,9 +1,8 @@
 import { Button, Modal, Form } from "react-bootstrap";
 import { useState } from "react";
+import { useEffect } from "react";
 import { useContext } from "react";
-import { UserContext } from "../Context/UserContext";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { UserContext } from "../../Context/UserContext";
 
 const ModalAddTask = () => {
   const { setTask, task, listTask, setListTask } = useContext(UserContext);
@@ -12,11 +11,14 @@ const ModalAddTask = () => {
 
   const handlerControl = (event: React.FormEvent) => {
     event.preventDefault();
-    console.log(task);
     setListTask([...listTask, task]);
-    console.log(listTask);
-    // localStorage.setItem("@listTask", `${listTask}`);
+    setShowModal(false);
   };
+
+  useEffect(() => {
+    console.log(JSON.stringify(listTask));
+    localStorage.setItem("@listTask", JSON.stringify(listTask));
+  }, [listTask]);
 
   return (
     <>
