@@ -1,8 +1,12 @@
 import { Card, Button, Row, Col } from "react-bootstrap";
 import { StyleCard } from "./style";
 import { BsTrash } from "react-icons/bs";
+import { useContext } from "react";
+import { UserContext } from "../../Context/UserContext";
 
 const CardTask = () => {
+  const { listTask } = useContext(UserContext);
+
   return (
     <StyleCard>
       <Card className="mt-1">
