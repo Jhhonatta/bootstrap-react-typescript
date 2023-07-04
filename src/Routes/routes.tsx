@@ -1,4 +1,4 @@
-import Login from "../Pages/login";
+import Login from "../Pages/start";
 import Dashboard from "../Pages/dashboard";
 
 import { Route, Routes } from "react-router-dom";

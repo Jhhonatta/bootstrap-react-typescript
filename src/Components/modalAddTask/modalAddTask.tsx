@@ -9,11 +9,15 @@ const ModalAddTask = () => {
 
   const [showModal, setShowModal] = useState(false);
 
+  const [numberTask, setNumberTask] = useState(1);
+
   const handlerControl = (event: React.FormEvent) => {
     event.preventDefault();
+    setNumberTask(numberTask + 1);
     setListTask([
       ...listTask,
       {
+        id: numberTask,
         tasks: task,
       },
     ]);
