@@ -17,8 +17,8 @@ const ModalAddTask = () => {
     setListTask([
       ...listTask,
       {
+        id: numberTask,
         tasks: task,
-        number: numberTask,
       },
     ]);
     setShowModal(false);

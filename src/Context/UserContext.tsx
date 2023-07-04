@@ -2,40 +2,46 @@ import { useNavigate } from "react-router-dom";
 
 import { createContext, useState } from "react";
 
+import { ReactNode } from "react";
+
 export const UserContext = createContext<IUserContext>({} as IUserContext);
 
-interface ListTask {
+interface ITasksProviderProps {
+  children: ReactNode;
+}
+
+interface IListTask {
   tasks: string;
   number: number;
 }
 
 interface IUserContext {
-  onSubmitLogin: (data: any) => Promise<void>;
-  logout: (data: any) => Promise<void>;
+  start: (data: any) => Promise<void>;
+  exit: (data: any) => Promise<void>;
   task: string;
   setTask: (data: any) => void;
-  listTask: ListTask[];
+  listTask: IListTask[];
   setListTask: (data: any) => void;
 }
 
-function UserProvider({ children }: any) {
+function UserProvider({ children }: ITasksProviderProps) {
   const navigate = useNavigate();
 
   const [task, setTask] = useState<string>("");
 
   const [listTask, setListTask] = useState<[]>([]);
 
-  const onSubmitLogin = async (data: any) => {
+  const start = async () => {
     return navigate("/dashboard", { replace: true });
   };
 
-  const logout = async (data: any) => {
+  const exit = async () => {
     return navigate("/", { replace: true });
   };
 
   return (
     <UserContext.Provider
-      value={{ onSubmitLogin, logout, task, setTask, listTask, setListTask }}
+      value={{ start, exit, task, setTask, listTask, setListTask }}
     >
       {children}
     </UserContext.Provider>

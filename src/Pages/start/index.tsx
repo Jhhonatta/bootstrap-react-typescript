@@ -5,7 +5,7 @@ import { UserContext } from "../../Context/UserContext";
 import { GiNotebook } from "react-icons/gi";
 
 const Login = () => {
-  const { onSubmitLogin } = useContext(UserContext);
+  const { start } = useContext(UserContext);
 
   return (
     <ContainerLogin className="containerLogin d-flex flex-column h-100 m-0">
@@ -34,7 +34,7 @@ const Login = () => {
                 variant="primary"
                 type="submit"
                 className="button-iniciar"
-                onClick={onSubmitLogin}
+                onClick={start}
               >
                 Iniciar
               </Button>
