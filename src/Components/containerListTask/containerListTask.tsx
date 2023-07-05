@@ -6,9 +6,10 @@ import { ListGroup } from "react-bootstrap";
 
 const DashboardListTask = () => {
   const { listTask } = useContext(UserContext);
+
   return (
-    <ContainerListTask className="d-flex justify-content-center h-100 m-1">
-      <ListGroup className="w-75">
+    <ContainerListTask className="d-flex justify-content-center pt-2 vh-100 bg-dark">
+      <ListGroup className="w-75 mb-2 listTask">
         {listTask.map((item, index) => (
           <CardTask
             key={index}

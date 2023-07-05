@@ -1,4 +1,4 @@
-import Login from "../Pages/start";
+import HomePage from "../Pages/homePage";
 import Dashboard from "../Pages/dashboard";
 
 import { Route, Routes } from "react-router-dom";
@@ -6,7 +6,7 @@ import { Route, Routes } from "react-router-dom";
 const Way = () => {
   return (
     <Routes>
-      <Route path={"/"} element={<Login />} />
+      <Route path={"/"} element={<HomePage />} />
       <Route path={"/dashboard"} element={<Dashboard />} />
     </Routes>
   );

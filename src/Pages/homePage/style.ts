@@ -15,7 +15,7 @@ export const ContainerLogin = styled.div`
   }
 
   .container-iniciar {
-    // margin-top: 45px;
+    margin-top: 45px;
     border-radius: 10px;
     font-weight: 600;
 
@@ -26,13 +26,23 @@ export const ContainerLogin = styled.div`
     }
   }
 
+  .check-icon {
+    color: rgb(0, 255, 127);
+  }
+
+  .check-full {
+    color: rgb(0, 255, 127);
+    margin: 5px;
+  }
+
   .icon-iniciar {
     font-size: 128px;
     color: white;
+    margin: 5px;
   }
 
   .button-iniciar {
-    background-color: rgba(255, 87, 127, 1);
+    background-color: rgb(255, 182, 193);
     border: 1px solid rgba(255, 87, 127, 1);
     color: black;
   }
