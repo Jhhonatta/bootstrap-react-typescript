@@ -10,17 +10,17 @@ interface ITasksProviderProps {
   children: ReactNode;
 }
 
-interface IListTask {
+interface ITask {
   tasks: string;
   number: number;
 }
 
 interface IUserContext {
-  start: (data: any) => Promise<void>;
-  exit: (data: any) => Promise<void>;
+  start: (data: any) => void;
+  exit: (data: any) => void;
   task: string;
-  setTask: (data: any) => void;
-  listTask: IListTask[];
+  setTask: (data: string) => void;
+  listTask: ITask[];
   setListTask: (data: any) => void;
 }
 
