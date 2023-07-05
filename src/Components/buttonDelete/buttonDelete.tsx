@@ -13,6 +13,7 @@ const ButtonDelete = ({ index }: IButtonDelete) => {
   const handlerButtonDelete = () => {
     const newListTask = listTask.filter((_, indice) => indice !== index);
     setListTask(newListTask);
+    localStorage.setItem("@listTask", JSON.stringify(listTask));
   };
 
   return (
