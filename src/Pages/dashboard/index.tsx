@@ -9,8 +9,8 @@ const Dashboard = () => {
   const { exit } = useContext(UserContext);
 
   return (
-    <ContainerDashboard className="containerDashboard  vh-100">
-      <Navbar bg="light" expand="sm" className="p-3 m-0 navbar">
+    <ContainerDashboard className="vh-100">
+      <Navbar expand="sm" className="p-3 m-0 navbar">
         <Navbar.Brand className="mr-0 col-6 navbar-brand">Notepad</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">

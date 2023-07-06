@@ -1,22 +1,22 @@
 import styled from "styled-components";
 
 export const ContainerListTask = styled.div`
-  .listTask {
+  .list-task {
     overflow-y: scroll;
     height: 85%;
   }
 
-  .listTask::-webkit-scrollbar {
+  .list-task::-webkit-scrollbar {
     width: 10px;
     margin-right: 2px;
   }
 
-  .listTask::-webkit-scrollbar-thumb {
+  .list-task::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 4px;
   }
 
-  .listTask::-webkit-scrollbar-thumb:hover {
+  .list-task::-webkit-scrollbar-thumb:hover {
     background-color: #555;
   }
 `;

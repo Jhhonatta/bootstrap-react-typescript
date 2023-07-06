@@ -8,8 +8,8 @@ const DashboardListTask = () => {
   const { listTask } = useContext(UserContext);
 
   return (
-    <ContainerListTask className="d-flex justify-content-center pt-2 vh-100 bg-dark">
-      <ListGroup className="w-75 mb-2 listTask">
+    <ContainerListTask className="d-flex justify-content-center pt-2 vh-100">
+      <ListGroup className="w-75 mb-2 list-task">
         {listTask.map((item, index) => (
           <CardTask
             key={index}

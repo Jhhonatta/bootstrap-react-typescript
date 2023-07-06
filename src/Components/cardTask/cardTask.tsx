@@ -12,7 +12,7 @@ interface ICardTask {
 const CardTask = ({ task, number, indice }: ICardTask) => {
   return (
     <StyleCard>
-      <Card className="mt-1">
+      <Card className="mt-1 card-complete">
         <Card.Body>
           <Row>
             <Col xs={8}>
