@@ -9,16 +9,20 @@ const DashboardListTask = () => {
 
   return (
     <ContainerListTask className="d-flex justify-content-center pt-2 vh-100">
-      <ListGroup className="w-75 mb-2 list-task">
-        {listTask.map((item, index) => (
-          <CardTask
-            key={index}
-            task={item.tasks}
-            number={index + 1}
-            indice={index}
-          />
-        ))}
-      </ListGroup>
+      {listTask.length > 0 ? (
+        <ListGroup className="w-75 mb-2 list-task">
+          <ListGroup.Item className="list-group">
+            {listTask.map((item, index) => (
+              <CardTask
+                key={index}
+                task={item.tasks}
+                number={index + 1}
+                indice={index}
+              />
+            ))}
+          </ListGroup.Item>
+        </ListGroup>
+      ) : null}
     </ContainerListTask>
   );
 };
